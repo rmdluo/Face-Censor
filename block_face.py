@@ -1,7 +1,7 @@
 import argparse
 
 parser = argparse.ArgumentParser(description='hide faces')
-parser.add_argument('-m', default='retinanet/retinanet_r50_fpn_fp16_1x_coco.py', help='model to use (retinanet/yolov3)')
+parser.add_argument('-m', default='retinanet', help='model to use (retinanet/yolov3)')
 parser.add_argument('in_file', help='path to input image', metavar='input_path')
 args = parser.parse_args()
 
