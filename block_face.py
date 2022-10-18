@@ -61,7 +61,6 @@ def replace_person(img, bounding_box, new_img):
 
 def hide_faces(img):
     result = inference_detector(obdet_model, img)
-    obdet_model.show_result(img, result, score_thr=0.2,out_file='demo/result1.jpg')
 
     classes = obdet_model.CLASSES
     person_bbs = result[classes.index('person')]
@@ -81,4 +80,4 @@ img = cv2.imread(args.in_file)
 
 img = hide_faces(img)
 
-cv2.imwrite('demo/result2.jpg', img)
+cv2.imwrite('demo/result.jpg', img)
